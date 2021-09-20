@@ -18,8 +18,8 @@ TODO: what worked / what didn't work
 
 ## Authors
 
-TODO: list of authors
-
+* Raymond Chen
+* Eddie Ma
 ## Acknowledgments
 
-TODO: cite any tutorials followed here
+https://flaviocopes.com/tutorial-react-spreadsheet/
