@@ -44,6 +44,25 @@ export default class Cell extends React.Component {
       { x: this.props.x, y: this.props.y }, this.state.value)
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    // Has a formula value? could be affected by any change. Update
+    if (this.state.value !== '' &&
+        this.state.value.slice(0, 1) === '=') {
+      return true
+    }
+
+    // Its own state values changed? Update
+    // Its own value prop changed? Update
+    if (nextState.value !== this.state.value ||
+        nextState.editing !== this.state.editing ||
+        nextState.selected !== this.state.selected ||
+        nextProps.value !== this.props.value) {
+      return true
+    }
+
+    return false
+  }
+
   /**
    * Remove the `unselectAll` event listener added in
    * `componentDidMount()`
