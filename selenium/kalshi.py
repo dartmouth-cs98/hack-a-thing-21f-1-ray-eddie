@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import sys
 
 
 chrome_options = Options()
@@ -27,8 +28,8 @@ element.click()
 
 wait = WebDriverWait(driver, 10)
 element = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div[3]/div[3]/div[1]/div[2]/div[2]/form/input[1]')))
-element.send_keys('Fake@Gmail.com')
-driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[3]/div[1]/div[2]/div[2]/form/input[2]').send_keys('12345')
+element.send_keys(sys.argv[1])
+driver.find_element_by_xpath('//*[@id="root"]/div[3]/div[3]/div[1]/div[2]/div[2]/form/input[2]').send_keys(sys.argv[2])
 element.submit()
 
 time.sleep(10)
