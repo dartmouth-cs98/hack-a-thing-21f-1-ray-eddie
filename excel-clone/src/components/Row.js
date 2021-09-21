@@ -17,6 +17,7 @@ const Row = (props) => {
         onChangedValue={props.handleChangedCell}
         updateCells={props.updateCells}
         value={props.rowData[x] || ''}
+        executeFormula={props.executeFormula}
       />,
     )
   }
@@ -35,6 +36,7 @@ Row.propTypes = {
   rowData: PropTypes.shape({
     string: PropTypes.string,
   }).isRequired,
+  executeFormula: PropTypes.func.isRequired
 }
 
 export default Row

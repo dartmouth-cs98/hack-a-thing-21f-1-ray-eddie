@@ -155,6 +155,14 @@ export default class Cell extends React.Component {
   }
 
   determineDisplay = ({ x, y }, value) => {
+    if (value.slice(0, 1) === '=') {
+      const res = this.props.executeFormula({ x, y },
+        value.slice(1))
+      if (res.error !== null) {
+        return 'INVALID'
+      }
+      return res.result
+    }
     return value
   }
 
@@ -250,4 +258,5 @@ Cell.propTypes = {
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
   value: PropTypes.string.isRequired,
+  executeFormula: PropTypes.func.isRequired
 }
