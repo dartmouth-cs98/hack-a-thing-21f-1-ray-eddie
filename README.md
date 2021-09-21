@@ -23,3 +23,4 @@ TODO: what worked / what didn't work
 ## Acknowledgments
 
 https://flaviocopes.com/tutorial-react-spreadsheet/
+https://selenium-python.readthedocs.io/
