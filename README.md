@@ -23,9 +23,9 @@ While we worked independently on our own parts, we would walk each other through
 
 ## What you learned
 
-Learned about how to use selenium with python.  Overall thought it was pretty easy to use, just a bit slow to run and a bit limited in what it can do.
+Learned about how to use selenium with python.  Overall thought it was pretty easy to use, just a bit slow to run and a bit limited in what it can do. We felt that the use of selenium depended on the creator of the website. Kalshi doesn't name its components, so we had to rely on using the xpath to interact with them.  This might be nifty for testing a web app, or possibly creating an app to make a drag and drop version of selenium (codeless browser automation).
 
-Also learned about using react as a whole as well as how to utilize component props/states.
+Also learned about using react as a whole as well as how to utilize component props/states.  Thought it was pretty simple to use, but very powerful in what we could create.  We learned how to display/modify dynamic information on a website, which has a broad reach of possible applications.
 
 ## Authors
 
